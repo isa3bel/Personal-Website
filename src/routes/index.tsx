@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "https://8b0417e0-ace3-4501-bc8e-2f1c9cf1f920.lovableproject.com/src/assets/portrait.jpg";
+const newPortrait = "https://lovable-uploads.s3.us-west-2.amazonaws.com/57c5d3dc-2bb9-443a-97b8-c0d4c0c3441e.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,14 +67,12 @@ function Hero() {
               Product Manager 2 - Office Web Shared
             </p>
             <p className="mt-6 text-lg leading-relaxed text-ink/70 md:text-xl">
-              My mission is simple: make software feel fast, sleek, and quietly
-              human. The kind of effortless people only notice when it&rsquo;s
-              missing — and trust a little more when it&rsquo;s there.
+              Product Manager 2 - Office Product Group
             </p>
           </div>
           <div className="md:col-span-5">
             <img
-              src={portrait}
+              src={newPortrait}
               alt="Portrait of Isabel Bolger"
               width={1200}
               height={1200}
@@ -300,7 +299,7 @@ function TwoTruths() {
                   No. {f.id}
                 </span>
                 <p
-                  className="font-serif text-2xl leading-snug md:text-3xl"
+                  className="aspect-square w-full rounded-2xl object-cover outline outline-1 -outline-offset-1 outline-black/5 px-0 mx-0"
                   dangerouslySetInnerHTML={{ __html: f.label }}
                 />
 
