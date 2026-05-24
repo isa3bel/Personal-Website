@@ -200,12 +200,7 @@ function About() {
           </AboutBlock>
           <AboutBlock kicker="Career path" title="Engineer → Product.">
             <p>
-              I started out as a software engineer, drawn to the puzzle of why
-              things were slow and the quiet satisfaction of making them quick.
-              Over time I realized the parts I loved most weren&rsquo;t the
-              code — they were the customer conversations, the design reviews,
-              the messy whiteboard sessions where a team finally agrees on what
-              to build.
+              I started my career as a software engineer, spending my days deep in the details of how things actually worked. That experience taught me to value strong foundations, thoughtful systems, and the importance of understanding the technical realities behind the products we build. Over time, I realized the parts I loved most weren’t the implementation itself, but the collaborative moments around it — talking with customers, shaping ideas with designers, and working through messy problems with a team until something finally clicked.
             </p>
             <p>
               So I made the jump to product on an adjacent partner team, and I
