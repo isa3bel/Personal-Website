@@ -211,6 +211,25 @@ function About() {
               live music, local art, great food, and the kinds of experiences
               that make a city feel alive and connected.
             </p>
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+              {[
+                { icon: "⛷️", label: "Ski" },
+                { icon: "🥾", label: "Hike" },
+                { icon: "🎾", label: "Tennis" },
+                { icon: "🏙️", label: "Local tourist" },
+                { icon: "📖", label: "Read" },
+              ].map((hobby) => (
+                <div
+                  key={hobby.label}
+                  className="flex flex-col items-center gap-2 rounded-xl border border-clay/15 bg-stone-soft/40 p-4 transition-colors hover:bg-stone-soft/80"
+                >
+                  <span className="text-2xl">{hobby.icon}</span>
+                  <span className="text-xs font-medium uppercase tracking-[0.15em] text-ink/60">
+                    {hobby.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </AboutBlock>
         </div>
       </div>
