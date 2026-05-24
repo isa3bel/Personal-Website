@@ -88,7 +88,7 @@ function Hero() {
 const principles = [
   {
     n: "01",
-    title: "Energy is a product strategy",
+    title: "⚡Energy is a product strategy",
     body: "How a team feels on Friday shapes what ships on Monday. I protect momentum like a feature.",
   },
   {
