@@ -299,7 +299,7 @@ function TwoTruths() {
                   No. {f.id}
                 </span>
                 <p
-                  className="aspect-square w-full rounded-2xl object-cover outline outline-1 -outline-offset-1 outline-black/5 px-0 mx-0"
+                  className="font-serif text-2xl leading-snug md:text-[1.65rem]"
                   dangerouslySetInnerHTML={{ __html: f.label }}
                 />
 
