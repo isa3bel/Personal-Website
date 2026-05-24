@@ -247,8 +247,7 @@ const facts: Fact[] = [
     id: 3,
     label: "I&rsquo;ve skydived twice.",
     isLie: true,
-    reveal:
-      "The lie! I have never jumped out of a plane. It&rsquo;s on the &lsquo;maybe one day&rsquo; list, filed somewhere between &lsquo;learn to surf&rsquo; and &lsquo;absolutely not&rsquo;.",
+    reveal: "​",
   },
 ];
 
