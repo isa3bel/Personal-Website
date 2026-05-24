@@ -62,8 +62,8 @@ function Hero() {
         </h1>
         <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-7">
-            <p className="font-serif text-2xl italic leading-snug text-ink/80 md:text-3xl">
-              Product Manager at Microsoft — working on performance.
+            <p className="font-serif text-2xl italic leading-snug text-ink/80 font-thin md:text-2xl">
+              Product Manager 2 - Office Web Shared
             </p>
             <p className="mt-6 text-lg leading-relaxed text-ink/70 md:text-xl">
               My mission is simple: make software feel fast, sleek, and quietly
