@@ -203,7 +203,7 @@ function About() {
               I started my career as a software engineer, spending my days deep in the details of how things actually worked. That experience taught me to value strong foundations, thoughtful systems, and the importance of understanding the technical realities behind the products we build. Over time, I realized the parts I loved most weren’t the implementation itself, but the collaborative moments around it — talking with customers, shaping ideas with designers, and working through messy problems with a team until something finally clicked.
             </p>
             <p>
-              That eventually led me to make the jump into product management on a neighboring partner team, and I quickly realized I had found the kind of work I genuinely love. Today, I’m a Product Manager at Microsoft working on performance in Microsoft Office — focused on making experiences feel fast, intuitive, and reliable. I love building the underlying foundations that create trust with our users, alongside a diverse and deeply thoughtful team.
+              ​
             </p>
           </AboutBlock>
           <AboutBlock kicker="Off the clock" title="What I do for me.">
