@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import portrait from "@/assets/portrait.jpg";
-const newPortrait = "https://lovable-uploads.s3.us-west-2.amazonaws.com/f8cafacd-aebd-41bf-8c52-acd116fb798e.jpg";
+const newPortrait = "https://lovable-uploads.s3.us-west-2.amazonaws.com/19c03c32-db9f-4668-ae2e-db74a0c375f6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
