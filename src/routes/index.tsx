@@ -234,7 +234,7 @@ const facts: Fact[] = [
     label: "I was adopted.",
     isLie: false,
     reveal:
-      "True. I was adopted as a baby, and it&rsquo;s shaped how I think about family, identity, and the stories we choose to tell about ourselves.",
+      "True. I was adopted from China when I was 6 months old — a part of my story that’s shaped a lot of how I see identity, family, and belonging.",
   },
   {
     id: 2,
