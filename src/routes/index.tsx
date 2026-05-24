@@ -41,7 +41,7 @@ function Nav() {
           About
         </a>
         <a href="#game" className="transition-colors hover:text-clay">
-          Two Truths
+          Two Truths and a lie
         </a>
       </div>
     </nav>
