@@ -4,6 +4,22 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-clay: var(--clay);
+  --color-ink: var(--ink);
+  --color-stone-soft: var(--stone-soft);
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --canvas: oklch(0.987 0.012 95);
+  --clay: oklch(0.68 0.13 38);
+  --ink: oklch(0.21 0.006 60);
+  --stone-soft: oklch(0.955 0.012 90);
+}
+
 /*
  * Design system definition.
  *
@@ -138,7 +154,13 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
