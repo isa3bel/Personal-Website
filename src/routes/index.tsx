@@ -241,7 +241,7 @@ const facts: Fact[] = [
     label: "I used to do competitive cheerleading.",
     isLie: false,
     reveal:
-      "True. Years of early-morning practices, glitter, and questionable hairspray choices. I can still hit a toe-touch — don&rsquo;t test me.",
+      "True. Between the ages of 7 and 9, you could find me flying through the air, doing backflips, and leading cheer routines with questionable hairdo's. I can still hit a toe-touch — don’t test me.",
   },
   {
     id: 3,
