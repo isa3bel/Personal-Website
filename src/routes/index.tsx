@@ -191,10 +191,11 @@ function About() {
         <div className="space-y-20">
           <AboutBlock kicker="Origins" title="Where I started.">
             <p>
-              I grew up curious about how things worked — taking apart anything
-              with a screw in it and asking a lot of &ldquo;but why?&rdquo;
-              questions. That instinct never really left; it just found new
-              shapes.
+              I grew up in Seattle, surrounded by water, mountains, and gray
+              skies I didn’t fully appreciate until I left. I moved to Boston to
+              attend Northeastern University, and the distance gave me a new
+              appreciation for the natural beauty and sense of calm that shaped
+              my upbringing.
             </p>
           </AboutBlock>
           <AboutBlock kicker="Career path" title="Engineer → Product.">
