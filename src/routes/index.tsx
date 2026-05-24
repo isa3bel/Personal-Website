@@ -67,7 +67,7 @@ function Hero() {
               Product Manager 2 - Office Web Shared
             </p>
             <p className="mt-6 text-lg leading-relaxed text-ink/70 md:text-xl">
-              Product Manager 2 - Office Product Group
+              I strive to build products that are resilient, accessible, and genuinely useful — while leading with curiosity, empathy, and authenticity.
             </p>
           </div>
           <div className="md:col-span-5">
