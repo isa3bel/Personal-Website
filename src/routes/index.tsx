@@ -208,11 +208,11 @@ function About() {
           </AboutBlock>
           <AboutBlock kicker="Off the clock" title="What I do for me.">
             <p>
-              I grew up in Seattle, surrounded by water, mountains, and gray
-              skies I didn’t fully appreciate until I left. I moved to Boston to
-              attend Northeastern University, and the distance gave me a new
-              appreciation for the natural beauty and sense of calm that shaped
-              my upbringing.
+              Outside of work, I’m usually exploring a new coffee shop, taking
+              long walks through the park, skiing in the mountains, or getting
+              out on a tennis court. I also love discovering cultural events —
+              live music, local art, great food, and the kinds of experiences
+              that make a city feel alive and connected.
             </p>
           </AboutBlock>
         </div>
