@@ -244,7 +244,8 @@ const facts: Fact[] = [
     id: 3,
     label: "I&rsquo;ve skydived twice.",
     isLie: true,
-    reveal: "​",
+    reveal:
+      "The lie! I’ve only gone skydiving once — which, in my opinion, is exactly the number of times a person needs to voluntarily launch themselves out of a perfectly functional airplane to fully understand the experience.",
   },
 ];
 
@@ -294,9 +295,7 @@ function TwoTruths() {
                 {isOpen ? (
                   <div className="mt-8 border-t border-stone-soft pt-6">
                     <p
-                      className={`mb-4 text-xs uppercase tracking-[0.25em] ${
-                        f.isLie ? "text-clay" : "text-ink/40"
-                      }`}
+                      className="mb-4 text-xs uppercase tracking-[0.25em] text-ink/40"
                     >
                       {f.isLie ? "The lie" : "Truth"}
                     </p>
