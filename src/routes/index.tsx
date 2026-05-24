@@ -93,27 +93,27 @@ const principles = [
   },
   {
     n: "02",
-    title: "Direction before velocity",
+    title: "➡️Direction before velocity",
     body: "Fast is only useful when it&rsquo;s pointed somewhere true. I&rsquo;d rather pause to aim than sprint sideways.",
   },
   {
     n: "03",
-    title: "Confusion is useful data",
+    title: "❓Confusion is useful data",
     body: "When something doesn&rsquo;t make sense, that&rsquo;s the signal — not the noise. I follow it instead of smoothing it over.",
   },
   {
     n: "04",
-    title: "Every edge case belongs to somebody",
+    title: "📐Every edge case belongs to somebody",
     body: "There&rsquo;s a real person behind that 0.3%. Caring about them is how a product earns the word &lsquo;great&rsquo;.",
   },
   {
     n: "05",
-    title: "I like foundations more than heroics",
+    title: "🧱I like foundations more than heroics",
     body: "Boring, durable systems beat dramatic rescues. Most of the magic is in the maintenance.",
   },
   {
     n: "06",
-    title: "Trust is built in small moments",
+    title: "🤝Trust is built in small moments",
     body: "Loading states. Tiny copy. A button that responds when you expect it to. Every small surface is a promise.",
   },
 ];
