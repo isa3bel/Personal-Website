@@ -321,9 +321,7 @@ function TwoTruths() {
         {guessed !== null && (
           <div className="mt-12 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
             <p className="font-serif text-2xl italic md:text-3xl">
-              {correct
-                ? "You got it. That one&rsquo;s the lie."
-                : "Nope — that one&rsquo;s true. Keep guessing."}
+              Fun guess — the lie was #3 (the country count). Here&rsquo;s the full story on each.
             </p>
             <button
               onClick={() => setGuessed(null)}
