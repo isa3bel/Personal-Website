@@ -219,20 +219,21 @@ function About() {
               live music, local art, great food, and the kinds of experiences
               that make a city feel alive and connected.
             </p>
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
+            <div className="mt-8 flex flex-wrap gap-3">
               {[
-                { icon: "⛷️", label: "Ski" },
-                { icon: "🥾", label: "Hike" },
-                { icon: "🎾", label: "Tennis" },
-                { icon: "🏙️", label: "Local tourist" },
-                { icon: "📖", label: "Read" },
+                { icon: "⛷️", label: "Ski", r: "2rem 1rem 2rem 1rem" },
+                { icon: "🥾", label: "Hike", r: "1rem 2rem 1rem 2rem" },
+                { icon: "🎾", label: "Tennis", r: "2rem 2rem 1rem 3rem" },
+                { icon: "🏙️", label: "Local tourist", r: "1rem 1rem 2rem 2rem" },
+                { icon: "📖", label: "Read", r: "3rem 1rem 3rem 1rem" },
               ].map((hobby) => (
                 <div
                   key={hobby.label}
-                  className="flex flex-col items-center gap-2 rounded-xl border border-clay/15 bg-stone-soft/40 p-4 transition-colors hover:bg-stone-soft/80"
+                  className="flex flex-col items-center gap-2 border border-sage/30 bg-canvas px-6 py-5 transition-all hover:-translate-y-1 hover:border-clay hover:shadow-md"
+                  style={{ borderRadius: hobby.r }}
                 >
                   <span className="text-2xl">{hobby.icon}</span>
-                  <span className="text-xs font-medium uppercase tracking-[0.15em] text-ink/60">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/60">
                     {hobby.label}
                   </span>
                 </div>
