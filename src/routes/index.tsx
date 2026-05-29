@@ -174,10 +174,10 @@ function AboutBlock({
   return (
     <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-12">
       <div className="md:col-span-4">
-        <p className="text-xs uppercase tracking-[0.3em] text-clay">{kicker}</p>
-        <h3 className="mt-3 font-serif text-3xl italic md:text-4xl">{title}</h3>
+        <p className="text-xs font-bold uppercase tracking-[0.3em] text-sage-deep">{kicker}</p>
+        <h3 className="mt-3 font-serif text-3xl italic text-clay md:text-4xl">{title}</h3>
       </div>
-      <div className="space-y-4 text-lg leading-relaxed text-ink/75 md:col-span-8">
+      <div className="space-y-4 text-lg leading-relaxed text-ink/75 md:col-span-8 md:border-l md:border-sage/30 md:pl-10">
         {children}
       </div>
     </div>
