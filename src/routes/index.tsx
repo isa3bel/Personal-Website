@@ -30,10 +30,10 @@ export const Route = createFileRoute("/")({
 function Nav() {
   return (
     <nav className="fixed top-0 z-50 flex w-full items-center justify-between px-6 py-6 md:px-12 mix-blend-multiply">
-      <a href="#top" className="font-serif text-xl italic">
-        I. Bolger
+      <a href="#top" className="font-serif text-2xl italic text-sage-deep">
+        Isabel Bolger
       </a>
-      <div className="flex gap-6 text-xs font-medium uppercase tracking-[0.18em] text-ink/60 md:gap-10 md:text-sm">
+      <div className="flex gap-6 text-xs font-semibold uppercase tracking-[0.2em] text-ink/50 md:gap-10 md:text-sm">
         <a href="#principles" className="transition-colors hover:text-clay">
           Principles
         </a>
@@ -54,30 +54,40 @@ function Hero() {
       id="top"
       className="flex min-h-screen flex-col justify-center px-6 pb-16 pt-32 md:px-12"
     >
-      <div className="mx-auto w-full max-w-5xl">
-        <p className="mb-8 text-xs uppercase tracking-[0.3em] text-clay">
+      <div className="mx-auto w-full max-w-6xl">
+        <p className="mb-8 text-xs font-bold uppercase tracking-[0.3em] text-clay">
           Hello, I&rsquo;m
         </p>
-        <h1 className="mb-10 font-serif text-6xl leading-[0.95] tracking-tight md:text-8xl lg:text-9xl">
-          Isabel <span className="italic text-clay">Bolger</span>.
-        </h1>
-        <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-12 md:gap-12">
-          <div className="md:col-span-7">
-            <p className="font-serif text-2xl italic leading-snug text-ink/80 font-thin md:text-2xl">
-              Product Manager 2 - Office Web Shared
-            </p>
-            <p className="mt-6 text-lg leading-relaxed text-ink/70 md:text-xl">
-              I strive to build products that are resilient, accessible, and genuinely useful — while leading with curiosity, empathy, and authenticity.
-            </p>
+        <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-8">
+            <h1 className="mb-10 font-serif text-7xl leading-[0.85] tracking-tight md:text-[9rem] lg:text-[11rem]">
+              <span className="block text-sage-deep">Isabel</span>
+              <span className="ml-6 block italic text-clay md:ml-16">Bolger.</span>
+            </h1>
+            <div className="max-w-xl">
+              <p className="font-serif text-2xl italic leading-snug text-ink/70 md:text-3xl">
+                Product Manager 2 — Office Web Shared
+              </p>
+              <p className="mt-6 text-lg leading-relaxed text-ink/65 md:text-xl">
+                I strive to build products that are resilient, accessible, and genuinely useful — while leading with curiosity, empathy, and authenticity.
+              </p>
+            </div>
           </div>
-          <div className="md:col-span-5">
-            <img
-              src={newPortrait}
-              alt="Portrait of Isabel Bolger"
-              width={1200}
-              height={1200}
-              className="aspect-square w-full rounded-2xl object-cover outline outline-1 -outline-offset-1 outline-black/5"
-            />
+          <div className="md:col-span-4 flex justify-center md:justify-end">
+            <div className="relative">
+              <div
+                className="absolute -inset-4 -z-10 bg-sage/25"
+                style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
+              />
+              <img
+                src={newPortrait}
+                alt="Portrait of Isabel Bolger"
+                width={1200}
+                height={1200}
+                className="w-72 object-cover shadow-2xl md:w-full"
+                style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%", aspectRatio: "4 / 5" }}
+              />
+            </div>
           </div>
         </div>
       </div>
