@@ -7,18 +7,25 @@
 @theme inline {
   --color-canvas: var(--canvas);
   --color-clay: var(--clay);
+  --color-clay-deep: var(--clay-deep);
+  --color-sage: var(--sage);
+  --color-sage-deep: var(--sage-deep);
   --color-ink: var(--ink);
   --color-stone-soft: var(--stone-soft);
-  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Work Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --canvas: oklch(0.987 0.012 95);
-  --clay: oklch(0.68 0.13 38);
+  --canvas: oklch(0.972 0.014 85);
+  --clay: oklch(0.64 0.14 38);
+  --clay-deep: oklch(0.52 0.15 34);
+  --sage: oklch(0.72 0.05 145);
+  --sage-deep: oklch(0.48 0.06 145);
   --ink: oklch(0.21 0.006 60);
-  --stone-soft: oklch(0.955 0.012 90);
+  --stone-soft: oklch(0.93 0.018 80);
 }
+
 
 /*
  * Design system definition.
