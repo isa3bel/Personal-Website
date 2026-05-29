@@ -282,7 +282,7 @@ function TwoTruths() {
   const correct = guessed !== null && facts.find((f) => f.id === guessed)?.isLie;
 
   return (
-    <section id="game" className="relative overflow-hidden bg-clay/8 py-28 md:py-32">
+    <section id="game" className="relative overflow-hidden bg-clay/10 py-28 md:py-32">
       <div className="absolute -right-20 -top-20 -z-0 h-72 w-72 rounded-full bg-clay/15 blur-3xl" />
       <div className="absolute -bottom-32 -left-20 -z-0 h-80 w-80 rounded-full bg-sage/20 blur-3xl" />
       <div className="relative mx-auto max-w-6xl px-6 md:px-12">
