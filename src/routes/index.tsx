@@ -282,14 +282,16 @@ function TwoTruths() {
   const correct = guessed !== null && facts.find((f) => f.id === guessed)?.isLie;
 
   return (
-    <section id="game" className="bg-stone-soft/60 py-28 md:py-32">
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+    <section id="game" className="relative overflow-hidden bg-clay/8 py-28 md:py-32">
+      <div className="absolute -right-20 -top-20 -z-0 h-72 w-72 rounded-full bg-clay/15 blur-3xl" />
+      <div className="absolute -bottom-32 -left-20 -z-0 h-80 w-80 rounded-full bg-sage/20 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6 md:px-12">
         <div className="mb-14 max-w-2xl md:mb-16">
-          <p className="mb-6 text-xs uppercase tracking-[0.3em] text-clay">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-clay">
             A little game
           </p>
-          <h2 className="font-serif text-5xl leading-[1.05] md:text-6xl">
-            Two truths and a lie.
+          <h2 className="font-serif text-5xl leading-[1.05] md:text-7xl">
+            Two truths and <span className="italic text-clay">a lie.</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink/70">
             Three things about me. Two are true, one is a beautiful little
