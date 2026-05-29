@@ -189,11 +189,11 @@ function About() {
     <section id="about" className="py-28 md:py-32">
       <div className="mx-auto max-w-5xl px-6 md:px-12">
         <div className="mb-20 max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-[0.3em] text-clay">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-clay">
             About
           </p>
-          <h2 className="font-serif text-5xl leading-[1.05] md:text-6xl">
-            The longer version.
+          <h2 className="font-serif text-5xl leading-[1.05] md:text-7xl">
+            The <span className="italic">longer version.</span>
           </h2>
         </div>
         <div className="space-y-20">
