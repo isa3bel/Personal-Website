@@ -130,26 +130,24 @@ const principles = [
 
 function Principles() {
   return (
-    <section id="principles" className="bg-stone-soft/60 py-28 md:py-32">
-      <div className="mx-auto max-w-6xl px-6 md:px-12">
+    <section id="principles" className="relative overflow-hidden bg-sage/10 py-28 md:py-32">
+      <div className="absolute -left-32 top-20 -z-0 h-72 w-72 rounded-full bg-sage/20 blur-3xl" />
+      <div className="relative mx-auto max-w-6xl px-6 md:px-12">
         <div className="mb-16 max-w-2xl md:mb-20">
-          <p className="mb-6 text-xs uppercase tracking-[0.3em] text-clay">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-sage-deep">
             How I work
           </p>
-          <h2 className="font-serif text-5xl leading-[1.05] md:text-6xl">
-            Six principles I keep coming back to.
+          <h2 className="font-serif text-5xl leading-[1.05] md:text-7xl">
+            Six principles I keep <span className="italic text-clay">coming back to.</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-clay/15 bg-clay/15 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
           {principles.map((p) => (
-            <div
-              key={p.n}
-              className="flex flex-col gap-4 bg-canvas p-8 transition-colors hover:bg-stone-soft/40 md:p-10"
-            >
-              <span className="text-xs uppercase tracking-[0.3em] text-clay">
+            <div key={p.n} className="group flex flex-col gap-4">
+              <span className="text-xs font-bold uppercase tracking-[0.3em] text-clay">
                 {p.n}
               </span>
-              <h3 className="font-serif text-2xl leading-snug md:text-[1.65rem]">
+              <h3 className="font-serif text-2xl leading-snug transition-colors group-hover:text-clay md:text-[1.75rem]">
                 {p.title}
               </h3>
               <p
