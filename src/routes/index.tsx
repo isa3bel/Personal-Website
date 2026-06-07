@@ -216,8 +216,7 @@ function About() {
               Outside of work, I’m usually exploring a new coffee shop, taking
               long walks through the park, skiing in the mountains, or getting
               out on a tennis court. I also love discovering cultural events —
-              live music, local art, great food, and the kinds of experiences
-              that make a city feel alive and connected.
+              live music, local art, and great food!
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               {[
