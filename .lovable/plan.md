@@ -1,27 +1,18 @@
-## Plan: Personal site for Isabel Bolger
+## Plan: Replace the site with the uploaded HTML and CSS
 
-Build a single-page personal site using the selected "Warm minimalist editorial" direction (Playfair Display + Inter, canvas/clay/ink palette).
+Rebuild the current one-page site to match `logan.html` and `logan.css`, while adapting the static markup and script into the existing React application.
 
-### Content sections
-1. **Sticky nav** — "I. Bolger" wordmark + links (Path, Work, Contact)
-2. **Hero** — "Building for speed & soul." + short intro paragraph + portrait image
-3. **Career path** — three-step timeline (Engineer Era → The Transition → Product at Microsoft) with a pull-quote card alongside, tuned to Isabel's own words (loves customer interaction, collaboration, design; engineer → PM on an adjacent partner team focused on performance)
-4. **Passions & side projects** — 2-card grid with generated imagery
-5. **Contact** — large "Say hello." with Email / LinkedIn / GitHub links
-6. **Footer line** — © Isabel Bolger
+### Changes
+- Replace the current page with the uploaded navigation, introduction, Microsoft experience, selected work, about, contact, and footer content.
+- Preserve the two expandable project case studies and recreate their open/close behavior in React.
+- Preserve the section reveal animation, sticky navigation, mobile layout, accessibility labels, skip link, and reduced-motion behavior.
+- Replace the current visual theme with the uploaded neutral Inter Tight design.
+- Use the project images already available for the two work previews, since the uploaded HTML references image files that were not included.
+- Update the page title and social description to the metadata supplied in the HTML.
 
-### Implementation
-- Replace `src/routes/index.tsx` placeholder with the full page, broken into small components under `src/components/site/` (Nav, Hero, Path, Work, Contact)
-- Add design tokens to `src/styles.css` as semantic CSS variables (`--canvas`, `--clay`, `--ink`, `--stone-soft`) registered in `@theme inline` so Tailwind classes like `bg-canvas`, `text-clay` work — no hardcoded hex in components
-- Load Playfair Display + Inter via `<link>` in `head()` of the root route; register `--font-serif` / `--font-sans` in `@theme inline`
-- Add per-page SEO via `head()` on the index route: title "Isabel Bolger — Product Manager", description, og tags, og:image once portrait is generated
-- Generate 3 images with `imagegen` saved to `src/assets/`:
-  - Warm soft-focus portrait (placeholder — Isabel can swap her own later)
-  - Minimal mindful-timer interface mock
-  - Warm clay/ceramic texture
-- Smooth scroll between nav anchors
-
-### Notes
-- Copy stays close to Isabel's voice from her intro (performance, sleek/fast, customer empathy, engineer-to-PM journey on adjacent partner team)
-- Portrait will be a generated stand-in; she can replace `src/assets/portrait.jpg` later
-- Side project titles are reasonable placeholders — she can edit text directly
+### Technical details
+- Convert the HTML into JSX in `src/routes/index.tsx`; no raw script tag will be added.
+- Fold the uploaded CSS into `src/styles.css` without changing the application framework or routing.
+- Update the root font link to Inter Tight.
+- Keep all external links, email address, résumé URL, project copy, and experience details exactly as provided.
+- Verify the finished page at desktop and mobile sizes, including both expandable project sections.
