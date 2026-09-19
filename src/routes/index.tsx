@@ -1,388 +1,241 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
-import portrait from "@/assets/portrait.jpg";
-import newPortrait from "@/assets/portrait-isabel.jpg";
+import { useEffect, useState } from "react";
+import newHereImage from "@/assets/project-tactile.jpg";
+import lumaBriefImage from "@/assets/project-tempo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Isabel Bolger — Product Manager at Microsoft" },
+      { title: "Isabel Bolger — Product Manager & Builder" },
       {
         name: "description",
         content:
-          "Isabel Bolger is a Product Manager at Microsoft focused on performance — making software feel fast, sleek, and effortless.",
+          "Isabel Bolger is a product manager who builds. See New Here and LumaBrief.",
       },
-      { property: "og:title", content: "Isabel Bolger — Product Manager at Microsoft" },
+      { property: "og:title", content: "Isabel Bolger — Product Manager & Builder" },
       {
         property: "og:description",
         content:
-          "Engineer-turned-PM working on performance at Microsoft. A few words on my path, my principles, and the things that make me, me.",
+          "Isabel Bolger is a product manager who builds. See New Here and LumaBrief.",
       },
-      { property: "og:image", content: portrait },
-      { property: "og:url", content: "/" },
-      { name: "twitter:image", content: portrait },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-function Nav() {
-  return (
-    <nav className="fixed top-0 z-50 flex w-full items-center justify-between px-6 py-6 md:px-12 mix-blend-multiply">
-      <a href="#top" className="font-serif text-2xl italic text-sage-deep">
-        Isabel Bolger
-      </a>
-      <div className="flex gap-6 text-xs font-semibold uppercase tracking-[0.2em] text-ink/50 md:gap-10 md:text-sm">
-        <a href="#principles" className="transition-colors hover:text-clay">
-          Principles
-        </a>
-        <a href="#about" className="transition-colors hover:text-clay">
-          About
-        </a>
-        <a href="#game" className="transition-colors hover:text-clay">
-          Two Truths and a lie
-        </a>
-      </div>
-    </nav>
-  );
-}
-
-function Hero() {
-  return (
-    <section
-      id="top"
-      className="flex min-h-screen flex-col justify-center px-6 pb-16 pt-32 md:px-12"
-    >
-      <div className="mx-auto w-full max-w-6xl">
-        <p className="mb-8 text-xs font-bold uppercase tracking-[0.3em] text-clay">
-          Hello, I&rsquo;m
-        </p>
-        <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-12 md:gap-16">
-          <div className="md:col-span-8">
-            <h1 className="mb-10 font-serif text-7xl leading-[0.85] tracking-tight md:text-[9rem] lg:text-[11rem]">
-              <span className="block text-sage-deep">Isabel</span>
-              <span className="ml-6 block italic text-clay md:ml-16">Bolger.</span>
-            </h1>
-            <div className="max-w-xl">
-              <p className="font-serif text-2xl italic leading-snug text-ink/70 md:text-3xl">
-                Product Manager 2 — Office Web Shared
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-ink/65 md:text-xl">
-                I strive to build products that are resilient, accessible, and genuinely useful — while leading with curiosity, empathy, and authenticity.
-              </p>
-            </div>
-          </div>
-          <div className="md:col-span-4 flex justify-center md:justify-end">
-            <div className="relative">
-              <div
-                className="absolute -inset-4 -z-10 bg-sage/25"
-                style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%" }}
-              />
-              <img
-                src={newPortrait}
-                alt="Portrait of Isabel Bolger"
-                width={1200}
-                height={1200}
-                className="w-72 object-cover shadow-2xl md:w-full"
-                style={{ borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%", aspectRatio: "4 / 5" }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-const principles = [
-  {
-    n: "01",
-    title: "⚡Energy is a product strategy",
-    body: "How a team feels on Friday shapes what ships on Monday. I protect momentum like a feature.",
-  },
-  {
-    n: "02",
-    title: "➡️Direction before velocity",
-    body: "Fast is only useful when it&rsquo;s pointed somewhere true. I&rsquo;d rather pause to aim than sprint sideways.",
-  },
-  {
-    n: "03",
-    title: "❓Confusion is useful data",
-    body: "When something doesn&rsquo;t make sense, that&rsquo;s the signal — not the noise. I follow it instead of smoothing it over.",
-  },
-  {
-    n: "04",
-    title: "📐Every edge case belongs to somebody",
-    body: "There&rsquo;s a real person behind that 0.3%. Caring about them is how a product earns the word &lsquo;great&rsquo;.",
-  },
-  {
-    n: "05",
-    title: "🧱I like foundations more than heroics",
-    body: "Boring, durable systems beat dramatic rescues. Most of the magic is in the maintenance.",
-  },
-  {
-    n: "06",
-    title: "🤝Trust is built in small moments",
-    body: "Loading states. Tiny copy. A button that responds when you expect it to. Every small surface is a promise.",
-  },
-];
-
-function Principles() {
-  return (
-    <section id="principles" className="relative overflow-hidden bg-sage/10 py-28 md:py-32">
-      <div className="absolute -left-32 top-20 -z-0 h-72 w-72 rounded-full bg-sage/20 blur-3xl" />
-      <div className="relative mx-auto max-w-6xl px-6 md:px-12">
-        <div className="mb-16 max-w-2xl md:mb-20">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-sage-deep">
-            How I work
-          </p>
-          <h2 className="font-serif text-5xl leading-[1.05] md:text-7xl">
-            Six principles I keep <span className="italic text-clay">coming back to.</span>
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-          {principles.map((p) => (
-            <div key={p.n} className="group flex flex-col gap-4">
-              <span className="text-xs font-bold uppercase tracking-[0.3em] text-clay">
-                {p.n}
-              </span>
-              <h3 className="font-serif text-2xl leading-snug transition-colors group-hover:text-clay md:text-[1.75rem]">
-                {p.title}
-              </h3>
-              <p
-                className="leading-relaxed text-ink/65"
-                dangerouslySetInnerHTML={{ __html: p.body }}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function AboutBlock({
-  kicker,
-  title,
-  children,
-}: {
-  kicker: string;
+type ProjectProps = {
+  id: string;
   title: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-12">
-      <div className="md:col-span-4">
-        <p className="text-xs font-bold uppercase tracking-[0.3em] text-sage-deep">{kicker}</p>
-        <h3 className="mt-3 font-serif text-3xl italic text-clay md:text-4xl">{title}</h3>
-      </div>
-      <div className="space-y-4 text-lg leading-relaxed text-ink/75 md:col-span-8 md:border-l md:border-sage/30 md:pl-10">
-        {children}
-      </div>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <section id="about" className="py-28 md:py-32">
-      <div className="mx-auto max-w-5xl px-6 md:px-12">
-        <div className="mb-20 max-w-2xl">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-clay">
-            About
-          </p>
-          <h2 className="font-serif text-5xl leading-[1.05] md:text-7xl">
-            The <span className="italic">longer version.</span>
-          </h2>
-        </div>
-        <div className="space-y-20">
-          <AboutBlock kicker="Origins" title="Where I started.">
-            <p>
-              I grew up in Seattle, surrounded by water, mountains, and gray
-              skies I didn’t fully appreciate until I left. I moved to Boston to
-              attend Northeastern University, and the distance gave me a new
-              appreciation for the natural beauty and sense of calm that shaped
-              my upbringing.
-            </p>
-          </AboutBlock>
-          <AboutBlock kicker="Career path" title="Engineer → Product.">
-            <p>
-              I started my career as a software engineer on the Word Web team at Microsoft, working on front-end features like dark mode, accessibility, and graphics. Being close to the implementation taught me to value strong foundations and thoughtful systems, but over time I realized the part I loved most was the collaboration around the work — shaping ideas with designers, talking with customers, and solving messy problems as a team. That led me to transition into product management, where I found the kind of work I genuinely love. Today, I’m a PM working on performance in Microsoft Office, focused on making experiences feel fast, intuitive, and reliable while building the foundations that create trust with our users.
-            </p>
-          </AboutBlock>
-          <AboutBlock kicker="Off the clock" title="What I do for me.">
-            <p>
-              Outside of work, I’m usually exploring a new coffee shop, taking
-              long walks through the park, skiing in the mountains, or getting
-              out on a tennis court. I also love discovering cultural events —
-              live music, local art, and great food!
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {[
-                { icon: "⛷️", label: "Ski", r: "2rem 1rem 2rem 1rem" },
-                { icon: "🥾", label: "Hike", r: "1rem 2rem 1rem 2rem" },
-                { icon: "🎾", label: "Tennis", r: "2rem 2rem 1rem 3rem" },
-                { icon: "🏙️", label: "Local tourist", r: "1rem 1rem 2rem 2rem" },
-                { icon: "📖", label: "Read", r: "3rem 1rem 3rem 1rem" },
-              ].map((hobby) => (
-                <div
-                  key={hobby.label}
-                  className="flex flex-col items-center gap-2 border border-sage/30 bg-canvas px-6 py-5 transition-all hover:-translate-y-1 hover:border-clay hover:shadow-md"
-                  style={{ borderRadius: hobby.r }}
-                >
-                  <span className="text-2xl">{hobby.icon}</span>
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-ink/60">
-                    {hobby.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </AboutBlock>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-type Fact = {
-  id: number;
-  label: string;
-  isLie: boolean;
-  reveal: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  imageClassName?: string;
+  tags: string[];
+  problem: React.ReactNode;
+  action: React.ReactNode;
+  result: React.ReactNode;
+  liveUrl: string;
+  repoUrl: string;
 };
 
-const facts: Fact[] = [
-  {
-    id: 1,
-    label: "I was adopted.",
-    isLie: false,
-    reveal:
-      "True. I was adopted from China when I was 6 months old — a part of my story that’s shaped a lot of how I see identity, family, and belonging.",
-  },
-  {
-    id: 2,
-    label: "I used to do competitive cheerleading.",
-    isLie: false,
-    reveal:
-      "True. Between the ages of 7 and 9, you could find me flying through the air, doing backflips, and leading cheer routines with questionable hairdo's. I can still hit a toe-touch — don’t test me.",
-  },
-  {
-    id: 3,
-    label: "I&rsquo;ve skydived twice.",
-    isLie: true,
-    reveal:
-      "The lie! I’ve only gone skydiving once — which, in my opinion, is exactly the number of times a person needs to voluntarily launch themselves out of a perfectly functional airplane to fully understand the experience.",
-  },
-];
-
-function TwoTruths() {
-  const [guessed, setGuessed] = useState<number | null>(null);
-  const correct = guessed !== null && facts.find((f) => f.id === guessed)?.isLie;
+function Project({
+  id,
+  title,
+  description,
+  image,
+  imageAlt,
+  imageClassName,
+  tags,
+  problem,
+  action,
+  result,
+  liveUrl,
+  repoUrl,
+}: ProjectProps) {
+  const [open, setOpen] = useState(false);
+  const panelId = `${id}-panel`;
 
   return (
-    <section id="game" className="relative overflow-hidden bg-clay/10 py-28 md:py-32">
-      <div className="absolute -right-20 -top-20 -z-0 h-72 w-72 rounded-full bg-clay/15 blur-3xl" />
-      <div className="absolute -bottom-32 -left-20 -z-0 h-80 w-80 rounded-full bg-sage/20 blur-3xl" />
-      <div className="relative mx-auto max-w-6xl px-6 md:px-12">
-        <div className="mb-14 max-w-2xl md:mb-16">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-clay">
-            A little game
-          </p>
-          <h2 className="font-serif text-5xl leading-[1.05] md:text-7xl">
-            Two truths and <span className="italic text-clay">a lie.</span>
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-ink/70">
-            Three things about me. Two are true, one is a beautiful little
-            fabrication. Tap the one you think is the lie — then I&rsquo;ll
-            tell you the whole story.
-          </p>
+    <article className={`project reveal${open ? " open" : ""}`} id={id}>
+      <button
+        className="project-toggle"
+        type="button"
+        aria-expanded={open}
+        aria-controls={panelId}
+        onClick={() => setOpen((value) => !value)}
+      >
+        <div className="thumb thumb-img">
+          <img className={imageClassName} src={image} alt={imageAlt} width="1240" height="880" />
         </div>
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {facts.map((f) => {
-            const isOpen = guessed === f.id;
-            const wasGuessed = guessed !== null;
-            return (
-              <button
-                key={f.id}
-                onClick={() => setGuessed(f.id)}
-                className={`group relative flex flex-col rounded-2xl border bg-canvas p-8 text-left transition-all md:p-10 ${
-                  isOpen
-                    ? "border-clay shadow-lg shadow-clay/10"
-                    : "border-stone-soft hover:-translate-y-1 hover:border-clay/40 hover:shadow-md"
-                } ${wasGuessed && !isOpen ? "opacity-70" : ""}`}
-              >
-                <span className="mb-6 text-xs uppercase tracking-[0.3em] text-clay">
-                  No. {f.id}
-                </span>
-                <p
-                  className="font-serif text-2xl leading-snug md:text-[1.65rem]"
-                  dangerouslySetInnerHTML={{ __html: f.label }}
-                />
-
-                {isOpen ? (
-                  <div className="mt-8 border-t border-stone-soft pt-6">
-                    <p
-                      className="mb-4 text-xs uppercase tracking-[0.25em] text-ink/40"
-                    >
-                      {f.isLie ? "The lie" : "Truth"}
-                    </p>
-                    <p
-                      className="leading-relaxed text-ink/75"
-                      dangerouslySetInnerHTML={{ __html: f.reveal }}
-                    />
-                  </div>
-                ) : (
-                  <span className="mt-8 text-xs uppercase tracking-[0.25em] text-ink/40 transition-colors group-hover:text-clay">
-                    Guess this one →
-                  </span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-
-        {guessed !== null && (
-          <div className="mt-12 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
-            <p className="font-serif text-2xl italic md:text-3xl">
-              Fun guess — the lie was #3.
-            </p>
-            <button
-              onClick={() => setGuessed(null)}
-              className="text-xs uppercase tracking-[0.3em] text-clay transition-opacity hover:opacity-70"
-            >
-              Reset ↺
-            </button>
+        <div className="info">
+          <div className="title">
+            <h3>{title}</h3>
+            <span className="arrow" aria-hidden="true">+</span>
           </div>
-        )}
+          <p>{description}</p>
+          <ul className="tags">
+            {tags.map((tag) => <li key={tag}>{tag}</li>)}
+          </ul>
+        </div>
+      </button>
+      <div className="case-panel" id={panelId} role="region" aria-label={`${title} case study`}>
+        <div className="case-inner">
+          <div className="cols">
+            <div><h4>Problem</h4><p>{problem}</p></div>
+            <div><h4>Action</h4><p>{action}</p></div>
+            <div><h4>Result</h4><p>{result}</p></div>
+          </div>
+          <p className="case-links">
+            <a className="btn btn-dark" href={liveUrl} target="_blank" rel="noopener noreferrer">
+              Visit {title} ↗
+            </a>
+            <a className="btn" href={repoUrl} target="_blank" rel="noopener noreferrer">
+              GitHub repo ↗
+            </a>
+          </p>
+        </div>
       </div>
-    </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-stone-soft px-6 py-16 md:px-12">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
-        <p className="font-serif text-lg italic">Isabel Bolger</p>
-        <p className="text-[10px] uppercase tracking-[0.3em] text-ink/40">
-          © {new Date().getFullYear()} · More sections coming soon
-        </p>
-      </div>
-    </footer>
+    </article>
   );
 }
 
 function Index() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach((element) => element.classList.add("in"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          observer.unobserve(entry.target);
+        }
+      }),
+      { threshold: 0.12 },
+    );
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <main className="bg-canvas text-ink selection:bg-clay/20">
-      <Nav />
-      <Hero />
-      <Principles />
-      <About />
-      <TwoTruths />
-      <Footer />
-    </main>
+    <>
+      <a className="skip" href="#work">Skip to projects</a>
+
+      <header className="nav">
+        <a className="brand" href="#top"><span className="dot" aria-hidden="true">IB</span> Isabel Bolger</a>
+        <nav aria-label="Primary">
+          <a href="#experience">Experience</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a className="btn" href="mailto:isabelbolger@hotmail.com">Get in touch</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section className="hero">
+          <div className="avatar" aria-hidden="true"><span>IB</span></div>
+          <p className="eyebrow">Product Manager &amp; Builder</p>
+          <h1>Hi, I&apos;m Isabel!</h1>
+          <p className="lead">
+            I&apos;m an Engineer turned Product Manager, with a passion for solving real problems and shipping solutions that make people&apos;s lives easier — grounded in hands-on engineering, sharpened by product leadership.
+          </p>
+          <div className="row">
+            <a className="btn btn-dark" href="#work">View work</a>
+            <a className="btn" href="https://drive.google.com/file/d/1IzzWfNLzHi_hBNV3NzqsoP78A7Q6VkHV/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume</a>
+          </div>
+        </section>
+
+        <section id="experience" className="section">
+          <div className="section-head">
+            <h2>Experience</h2>
+            <span className="count">Microsoft · 2021 – Present</span>
+          </div>
+
+          <div className="role reveal">
+            <div className="role-meta">
+              <p className="company">Microsoft</p>
+              <h3>Product Manager 2, Office Web Shared</h3>
+              <p className="dates">Jan 2025 – Present</p>
+            </div>
+            <ul className="role-body">
+              <li><strong>Faster app load, 8s to 3s.</strong> Lead a 3-engineer crew adopting Chromium&apos;s Speculative Rules API. I own the experiment strategy and measurement framework, balancing performance gains against COGS, and align partner teams to expand adoption.</li>
+              <li><strong>65% faster Copilot chat pane launch.</strong> Coordinated optimizations across Web Shared, Office AI and Office Platform, and set new org-wide performance metrics with User Research. Profiling and daily benchmarks surfaced startup delays and caught regressions early.</li>
+              <li><strong>10s boot at P95 for major enterprise tenants.</strong> Led the Enterprise Health initiative across 6 teams, set its OKRs with senior leadership, and cut client-to-server latency by debugging tenant network traces.</li>
+            </ul>
+          </div>
+
+          <div className="role reveal">
+            <div className="role-meta">
+              <p className="company">Microsoft</p>
+              <h3>Software Engineer, Word Online</h3>
+              <p className="dates">Jul 2021 – Dec 2024</p>
+            </div>
+            <ul className="role-body">
+              <li><strong>Dark Mode.</strong> Helped take it from prototype to production, covering canvas rendering, browser bugs, contrast, automation and staged rollout.</li>
+              <li><strong>Paragraph Options.</strong> Built the pagination controls (Keep with next, Widow/Orphan, Keep lines together) across client and server, then ran the bug bash, experiments and launch. Reported average usage of about 21,000 uses per day.</li>
+              <li><strong>Accessibility.</strong> One of two drivers of a 300+ bug program across 13 engineering areas. I shipped fixes myself and trained partner teams through office hours. The crew earned a Gold Medal in the accessibility health score.</li>
+              <li><strong>Graphics.</strong> Owned testing, automation and reliability for a migration to browser-side rendering of pictures and shapes. I built telemetry to guide rollout decisions and recommended pausing an experiment when the data was too thin to call.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="work" className="section">
+          <div className="section-head"><h2>Selected work</h2><span className="count">02</span></div>
+          <Project
+            id="new-here"
+            title="New Here"
+            description="A personalized 7/30/90-day plan for people moving to a new city."
+            image={newHereImage}
+            imageAlt="New Here project preview"
+            tags={["Consumer", "AI", "Next.js", "Supabase"]}
+            problem={<>Moving leaves a gap between <em>intending</em> to build a life and actually showing up. Meetup, Reddit and Google list options but never sequence them, so people stall before forming a routine.</>}
+            action="Designed and built a time-boxed plan with checkable actions in three phases, personalized to the city down to the local transit card and DMV. Phase three is a weekly grid built from what the user kept, not another checklist."
+            result="A live, full-stack app that guides users from logistics and setup to interest-based recommendations and sustainable routines. 28 fixed starter tasks keep every plan comparable, and a pre-move mode helps before arrival."
+            liveUrl="https://newhereclub.vercel.app"
+            repoUrl="https://github.com/isa3bel/New-Here"
+          />
+          <Project
+            id="lumabrief"
+            title="LumaBrief"
+            description="Track the SF tech events you attend, what you learned, and who you met."
+            image={lumaBriefImage}
+            imageAlt="LumaBrief project preview"
+            imageClassName="app-icon"
+            tags={["Productivity", "Expo", "React Native", "Supabase"]}
+            problem="Networking events blur together. Notes, takeaways and contacts end up scattered across Luma, LinkedIn and memory."
+            action="Built one record per event, pulling events from Luma and connections from LinkedIn. A single codebase runs on web, iOS and Android."
+            result="A live dashboard for managing event registrations and capturing post-event learnings in one place, plus a companion browser extension that imports LinkedIn connections."
+            liveUrl="https://luma-brief.vercel.app/"
+            repoUrl="https://github.com/isa3bel/Luma-Brief"
+          />
+        </section>
+
+        <section id="about" className="section about reveal">
+          <h2>About</h2>
+          <div>
+            <p>I grew up in Seattle, surrounded by water, mountains and gray skies I didn&apos;t fully appreciate until I moved to Boston for Northeastern. The distance gave me a new appreciation for the calm that shaped me.</p>
+            <p>I started as a software engineer on the Word Web team, then moved into product. Being close to the implementation taught me to value strong foundations, but the part I loved most was the collaboration around the work.</p>
+            <p>Off the clock, you&apos;ll find me at coffee shops, on walks, skiing, playing tennis or out at a cultural event.</p>
+          </div>
+        </section>
+
+        <section className="section cta reveal">
+          <h2>Have a role in mind?</h2>
+          <a className="btn btn-dark" href="mailto:isabelbolger@hotmail.com">isabelbolger@hotmail.com</a>
+          <p className="links">
+            <a href="https://www.linkedin.com/in/isabel-b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/isa3bel" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://drive.google.com/file/d/1IzzWfNLzHi_hBNV3NzqsoP78A7Q6VkHV/view?usp=share_link" target="_blank" rel="noopener noreferrer">Resume</a>
+          </p>
+        </section>
+      </main>
+
+      <footer className="foot"><span>© {new Date().getFullYear()} Isabel Bolger</span><a href="#top">Back to top ↑</a></footer>
+    </>
   );
 }
