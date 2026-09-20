@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import newHereImage from "@/assets/project-tactile.jpg";
-import lumaBriefImage from "@/assets/project-tempo.jpg";
+import newHereAsset from "@/assets/new-here.png.asset.json";
+import lumaBriefAsset from "@/assets/lumabrief.png.asset.json";
+
+const newHereImage = newHereAsset.url;
+const lumaBriefImage = lumaBriefAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,7 +61,7 @@ function Project({
   const panelId = `${id}-panel`;
 
   return (
-    <article className={`project reveal${open ? " open" : ""}`} id={id}>
+    <article className={`project${open ? " open" : ""}`} id={id}>
       <button
         className="project-toggle"
         type="button"

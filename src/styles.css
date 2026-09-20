@@ -84,7 +84,7 @@ h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 600; letter-spacing: -.03em
 .thumb { aspect-ratio: 4/3; border-radius: 18px; background: var(--soft); display: grid; place-items: center; align-content: center; gap: 20px; overflow: hidden; }
 .thumb-img { display: block; aspect-ratio: 1240 / 880; }
 .thumb-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.thumb-img .app-icon { height: 82%; width: 82%; margin: auto; object-fit: cover; border-radius: 16px; filter: drop-shadow(0 12px 24px rgb(0 0 0 / 18%)); }
+.thumb-img .app-icon { height: 82%; width: 82%; margin: auto; object-fit: contain; border-radius: 16px; filter: drop-shadow(0 12px 24px rgb(0 0 0 / 18%)); }
 .info { padding: 12px 20px 12px 4px; }
 .title { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .info h3 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 600; letter-spacing: -.03em; }
